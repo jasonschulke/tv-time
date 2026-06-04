@@ -53,7 +53,7 @@ const STYLES = `
     --magenta:#ff2e88; --cyan:#34e3ff; --lime:#b6ff3c; --purple:#8a4bff;
     --panel:#1b0f31; --panel-edge:#3a2160; --danger:#ff3b5c; --hot1:#ff3b2e; --hot2:#ff9d2f; }
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  .app { position:relative; display:flex; flex-direction:row; min-height:560px; border-radius:18px; overflow:hidden; color:var(--ink); font-family:'VT323',monospace; user-select:none;
+  .app { position:relative; display:flex; flex-direction:row; min-height:calc(100vh - var(--header-height, 56px)); border-radius:18px; overflow:hidden; color:var(--ink); font-family:'VT323',monospace; user-select:none;
     background:
       radial-gradient(120% 70% at 50% -10%, rgba(138,75,255,.28), transparent 55%),
       radial-gradient(90% 60% at 50% 120%, rgba(52,227,255,.12), transparent 60%),
@@ -135,7 +135,7 @@ const STYLES = `
   .gameover .rack { flex-direction:row; flex-wrap:wrap; justify-content:center; max-width:80%; overflow:visible; flex:0 0 auto; }
   .gameover .rack .coin { --sz:34px; }
 
-  .music-toggle { position:absolute; bottom:12px; left:12px; z-index:60; background:rgba(20,10,36,.8); border:2px solid var(--panel-edge); color:var(--cyan); font-size:18px; width:40px; height:40px; border-radius:10px; cursor:pointer; line-height:1; }
+  .music-toggle { position:absolute; top:12px; right:12px; z-index:60; background:rgba(20,10,36,.8); border:2px solid var(--panel-edge); color:var(--cyan); font-size:18px; width:40px; height:40px; border-radius:10px; cursor:pointer; line-height:1; }
   .music-toggle.off { color:#5a4a78; }
   .music-toggle.off::after { content:""; position:absolute; left:6px; right:6px; top:50%; height:2px; background:#5a4a78; transform:rotate(-30deg); }
 
